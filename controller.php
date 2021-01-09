@@ -7,6 +7,9 @@
     case '/forum.php':
         require 'forum.php';
         break;
+    case '/path.php':
+        require 'path.php';
+        break;
     case '/database/database-function.php':
         require __DIR__.'/database/database-function.php';
         break;
