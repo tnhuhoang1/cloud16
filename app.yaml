@@ -52,11 +52,12 @@ entrypoint:
   serve controller.php
 
 
-# env_variables:
+env_variables:
     # GOOGLE_STORAGE_BUCKET: ""
     # populate these to use the "mysql" or "postres" backends
-    # CLOUDSQL_CONNECTION_NAME: ""
-    # CLOUDSQL_USER: "root"
-    # CLOUDSQL_PASSWORD: "database16"
+    # CLOUDSQL_CONNECTION_NAME: "cloud-16:asia-southeast1:database16"
+    CLOUDSQL_HOST: "mysql:unix_socket=/cloudsql/cloud-16:asia-southeast1:database16"
+    CLOUDSQL_USER: "root"
+    CLOUDSQL_PASSWORD: "database16"
     ## Uncomment to give your database a name other than "bookshelf"
-    # CLOUDSQL_DATABASE_NAME: "forum"
+    CLOUDSQL_DATABASE_NAME: "forum"

@@ -1,8 +1,8 @@
 <?php
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $databaseName = "forum";
+    $host = getenv('CLOUDSQL_HOST');
+    $username = getenv('CLOUDSQL_USER');
+    $password = getenv('CLOUDSQL_PASSWORD');
+    $databaseName = getenv('CLOUDSQL_DATABASE_NAME');
     $conn = new mysqli($host, $username, $password, $databaseName);
 
     if($conn -> connect_error){
