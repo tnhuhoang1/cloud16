@@ -1,6 +1,5 @@
 <?php
     require_once('forum-connection.php');
-
     function insertTable($tableName, $data){
         global $conn;
         $sql = "insert into $tableName set ". array_key_first($data) .'= ?';

@@ -1,6 +1,5 @@
 <?php
     session_start();
-    //require_once("path.php");
     require_once("./database/database-function.php");
     $_SESSION['path'] = "home";
 ?>
