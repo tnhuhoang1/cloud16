@@ -1,8 +1,8 @@
 <?php
     session_start();
     $_SESSION['path'] = 'quest';
-    require_once("path.php");
-    require_once(PATH."./database/database-function.php");
+    // require_once("path.php");
+    require_once("./database/database-function.php");
 ?>
 <?php
     if(isset($_POST["ar-submit"])){
@@ -38,7 +38,7 @@
 <html lang="en">
 <?php
 //head
-include(PATH."/forum/head.php");
+include("./forum/head.php");
 ?>
 <body class="bg-light">
     <div class="h-full-alert" id="h-full-alert">

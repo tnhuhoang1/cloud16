@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require_once("path.php");
-    require_once(PATH."./database/database-function.php");
+    //require_once("path.php");
+    require_once("./database/database-function.php");
     $_SESSION['path'] = "home";
 ?>
 <?php
@@ -12,7 +12,7 @@
 <html lang="en">
 <?php
 //head
-include(PATH."/forum/head.php");
+include("./forum/head.php");
 ?>
 <body class="bg-light">
     
