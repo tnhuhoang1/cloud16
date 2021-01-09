@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CKEditor 5 – Classic editor</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+</head>
+<body>
+    <h1>Classic editor</h1>
+    <!-- <div id="editor">
+        <p>This is some sample content.</p>
+    </div> -->
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button onclick="xem()">xem</button>
+    <script>
+        ClassicEditor
+         .create( document.querySelector( '#editor' ), {
+             ckfinder: {
+                 uploadUrl: '/www/preject/CSE485_1851061587_TranNhuHoang/3.PROJECT/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+             },
+             
+             toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ]
+         }
+         
+         
+         )
+         .catch( function( error ) {
+             console.error( error );
+         } );
+
+         function xem(){
+             var s = document.getElementsByClassName("ck-content")[0];
+             alert(s.innerHTML);
+         }
+    </script>
+</body>
+</html>

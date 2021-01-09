@@ -1,0 +1,169 @@
+.h-mem-search{
+    background: #a8acad;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #797c7c;
+    border-left: 1px solid #797c7c;
+    border-right: 1px solid #797c7c;
+}
+
+.h-mem-search .pagination{
+    margin: 0;
+}
+
+.h-mem-search > div:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+.h-mem-search > div:last-child input{
+    width: 40%;
+}
+
+.h-mem-header{
+    background: #cbcece ;
+    padding: 10px 0;
+    font-weight: bold;
+    border: 1px solid grey;
+}
+.h-mem-header > div{
+    text-align: center;
+}
+.h-mem-header > div:first-child{
+    text-align: start;
+}
+.h-mem-row{
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    text-align: center;
+}
+.h-mem-row:hover{
+    background: darkgray;
+}
+
+.h-mem-row-user-img{
+    width: 50px;
+    height: 50px;
+}
+.h-mem-row > div{
+    padding: 10px 15px 10px 15px;
+}
+.h-mem-col{
+    display: flex;
+    padding: 10px 0 10px 15px;
+}
+.h-mem-col > div:last-child{
+    margin-left: 10px;
+    color: rgb(44, 47, 240);
+}
+
+/* information */
+
+.h-row-sec{
+    padding: 15px;
+    margin: 20px;
+}
+
+.h-info-img img{
+    width: 80%;
+    padding: 20px 0;
+}
+
+.h-info-con{
+   
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+}
+.h-info-detailed{
+    position: relative;
+}
+.h-info-edit{
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    font-size: 1.1em;
+    right: 10px;
+}
+.h-info-edit:hover{
+    cursor: pointer;
+}
+.h-info-detailed > div:first-child{
+    display: flex;
+}
+
+
+.h-info-detailed > div:first-child > div:first-child{
+    width: 50%;
+    font-weight: bold;
+}
+
+.h-i-d-col1 p{
+    margin: 10px 0 5px 5px;
+}
+
+.h-i-d-col2 p{
+    margin: 10px 0 5px 5px;
+}
+
+.h-info-row{
+    border-radius: 6px;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+}
+.h-info-img{
+    position: relative;
+}
+
+.h-info-img-upload{
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+
+}
+
+.h-userImage{
+    width: 83px; 
+    opacity: 0.4;
+}
+.h-userImage:hover{
+    opacity: 1;
+}
+.h-upload-img{
+    padding: 0px 5px;
+    opacity: 0.4;
+}
+.h-upload-img:hover{
+    opacity: 1;
+}
+
+@media (max-width: 991px){
+    .h-i-d-col1 p{
+        height: 36px;
+    }
+    .h-i-d-col2 p{
+        height: 36px;
+    }
+}
+@media (max-width: 767px){
+    .h-i-d-col1 p{
+        font-size: 0.8em;
+        
+    }
+    .h-i-d-col2 p{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 575px){
+    .h-i-d-col1 p{
+        font-size: 1em;
+        height: 24px;
+    }
+    .h-i-d-col2 p{
+        font-size: 1em;
+        height: 24px;
+
+    }
+}

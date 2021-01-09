@@ -1,0 +1,50 @@
+# Use PHP 7.3 by replacing "php72" below with "php73"
+runtime: php72
+
+runtime_config:
+  document_root: test
+# Defaults to "serve index.php" and "serve public/index.php". Can be used to
+# serve a custom PHP front controller (e.g. "serve backend/index.php") or to
+# run a long-running PHP script as a worker process (e.g. "php worker.php").
+#
+# entrypoint: serve index.php
+#
+
+handlers:
+# Serve a directory as a static resource.
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /includes
+  static_dir: includes
+
+- url: /forum
+  static_dir: forum
+
+- url: /images
+  static_dir: images
+
+# Serve images as static resources.
+- url: /(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+
+# Serve your app through a front controller at index.php or public/index.php.
+- url: .*
+  script: auto
+
+entrypoint:
+  serve controller.php
+
+
+# env_variables:
+    # GOOGLE_STORAGE_BUCKET: ""
+    # populate these to use the "mysql" or "postres" backends
+    # CLOUDSQL_CONNECTION_NAME: ""
+    # CLOUDSQL_USER: ""
+    # CLOUDSQL_PASSWORD: ""
+    ## Uncomment to give your database a name other than "bookshelf"
+    # CLOUDSQL_DATABASE_NAME: ""

@@ -1,0 +1,99 @@
+.h-cate-header{
+    border: 1px solid rgb(217, 241, 241);
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+    background: rgb(217, 241, 241);
+}
+
+.h-cate-main{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.h-cate-title{
+    border-top: 1px solid rgb(172, 143, 143);
+    background: rgba(180, 175, 175,0.65);
+    padding-left: 18px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    
+}
+
+.h-cate-title a{
+    color: rgb(64, 64, 219);
+}
+
+.h-cate-title a:hover{
+    color: rgb(153, 58, 58);
+}
+
+.h-cate-topics > div:first-child{
+    padding-left: 25px;
+    
+
+
+}
+
+.h-cate-topics{
+    border-bottom: 1px solid gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex; 
+    align-items: center;
+}
+
+.h-cate-last-post{
+    padding: 0px;
+}
+p{
+    margin: 0;
+}
+
+.h-c-t-img img{
+    width: 60px;
+    height: 60px;
+    padding: 3px 1px 3px 3px;
+}
+
+.h-c-l-p-con{
+    display: flex;
+}
+
+.h-c-l-p-con p{
+    font-size: 0.75em;
+    
+}
+
+.h-p-topics-title{
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.h-p-topics-date{
+    color:gray;
+    margin-left: 8px;
+    font-style: italic;
+}
+
+/* sub - cate */
+
+.h-sc-t-detailed .h-sc-name{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.h-sc-stats p{
+    font-size: 0.8em;
+}
+
+.h-cate-topics i:first-child{
+    margin-right: 5px;
+}
+
+@media (max-width: 575px){
+    .h-cate-cate{
+        overflow-x: auto;
+    }
+    
+}

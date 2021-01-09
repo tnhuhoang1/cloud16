@@ -1,0 +1,123 @@
+.h-ps-img{
+    width: 30%;
+
+    text-align: center;
+}
+.h-ps-img img{
+    margin-top: 10px;
+    width: 90%;
+}
+
+.h-ps-detailed{
+    width: 70%;
+    padding: 5px;
+}
+.h-ps-con{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10px 10px 0;
+}
+.h-ps-con:hover{
+    background-color: rgb(167, 157, 157);
+}
+.h-ps-detailed .h-ps-title{
+    font-size: 1.25em;
+    
+    margin-bottom: 10px;
+}
+
+.h-ps-detailed .h-ps-title a{
+    color: rgb(75, 75, 240);
+}
+
+.h-ps-detailed .h-ps-title a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 5px rgb(140, 140, 190);
+}
+.h-ps-detailed .h-ps-des{
+    font-style: italic;
+}
+
+.h-ps-sub-nav > div:first-child a{
+    font-size: 1.25em;
+    
+    
+}
+
+.h-ps-sub-nav{
+    margin-top: 35px;
+    border: 10px solid white;
+    padding: 20px 0 20px 0 ;
+}
+.h-ps-sub-nav > div, .h-ps-sub-nav >ul{
+    width: 80%;
+    margin: auto;
+}
+.h-ps-sub-nav > div{
+    font-size: 1.25em;
+    text-align: center;
+}
+.h-ps-sub-nav > ul >li{
+    position: relative;
+    margin: 5px 0px 5px 0px;
+}
+
+.h-ps-sub-nav > ul >li > a{
+    padding-left: 5px;
+    display: block;
+    padding: 5px 0px 5px 0px;
+    background: #f8f9fa;
+}
+
+.h-ps-sub-nav > ul .h-active{
+    color: darkblue;
+}
+
+.h-ps-sub-nav > ul >li > a >i{
+    display: none;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+.h-ps-sub-nav > ul >li > a:hover{
+    text-decoration: none;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgb(190, 187, 187);
+    padding-left: 25px;
+    transition: padding-left 0.5s;
+}
+
+.h-ps-sub-nav > ul >li > a:active{
+    box-shadow: 0px 0px 4px rgb(190, 187, 187);
+    color: rgb(4, 4, 82);
+}
+.h-main-card > h3{
+    margin-left: 10px;
+}
+
+/* post */
+.h-p-content{
+    margin: 5px 5px 20px 10px;
+}
+.h-p-content h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.h-p-related-post{
+    margin-top: 150px;
+}
+
+.h-p-related-post ul >li{
+    margin-left: 20px;
+
+    padding: 3px 5px 3px 5px
+    
+}
+
+.h-p-related-post ul >li a{
+    color: rgb(23, 23, 73);
+}
+.h-p-content-main img{
+    max-width: 95%;
+}

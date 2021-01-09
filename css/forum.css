@@ -1,0 +1,802 @@
+.h-a{
+    color: black;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.h-li{
+    list-style: none;
+}
+.h-li:hover{
+    cursor: pointer;
+}
+.h-a:hover{
+    text-decoration: none;
+}
+.h-logo{
+    text-align: center;
+}
+.h-logo a{
+    font-size: 3em;
+    font-family: 'Monoton', cursive;
+    text-shadow: 2px 2px 5px rgb(36, 42, 54);
+}
+.h-logo a:hover{
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgb(56, 80, 129);
+}
+
+.h-logo a:active{
+    text-shadow: 2px 2px 5px rgb(187, 195, 212);
+}
+
+.h-full-alert{
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+.h-full-alert > div{
+    border-radius: 20px;
+    background-color: rgb(230, 228, 228);
+    padding: 100px;
+    opacity: 1.0;
+    font-size: xx-large;
+    box-shadow: 0px 0px 20px gray;
+    font-weight: bold;
+    
+}
+.h-full-alert > div i{
+    color: green;
+}
+.h-logo span{
+    margin: 0 5px 0 5px;
+}
+.h-user-avatar{
+    width: 32px;
+    height: 32px;
+}
+
+.h-user-username{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.h-user-username img{
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.h-logo .h-char-1{
+    color:rgb(201, 26, 79);
+}
+.h-logo .h-char-2{
+    color:rgb(32, 145, 47);
+}
+.h-logo .h-char-3{
+    color:rgb(130, 110, 199);
+}
+
+/* user panel */
+.h-b-account{
+    background: none;
+    border: none;
+    color: white;
+}
+.h-b-account:hover{
+    background: none;
+    text-shadow: 0px 0px 5px white;
+}
+.h-b-account:focus{
+    outline: none;
+    border: none;
+    text-shadow: 0px 0px 15px white;
+    
+}
+.h-tab-login-form .h-errors{
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.25em;
+    padding: 5px 10px;
+    background-color: rgb(199, 97, 97);
+    display: none;
+}
+
+.h-user{
+    width: 30%;
+    padding-right: 40px;
+    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+}
+.h-u-panel{
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    color: white;
+
+    right: 40px;
+    top: 20px;
+}
+.h-u-panel ul{margin: 0;}
+.h-logo-row{
+    background: rgb(10, 28, 43);
+    
+}
+.h-user-row{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.h-title-row{
+    background: rgb(0, 104, 136);
+    padding-left: 10%;
+    font-size: 3em;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.bg-light{
+    height: 1000px;
+}
+.h-banner-searchbar{
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+.h-banner-searchbar form{
+    width: 100%;
+
+    margin: 0;
+    font-size: 25px;
+    display: flex;
+}
+
+.h-banner-search{
+    margin-left: 15%;
+    width: 60%;
+    padding: 2px 2px 2px 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.h-banner-search:focus{
+    outline: none;
+    border: 1px solid rgb(36, 34, 34);
+}
+.h-banner-search-btn{
+    color: white;   
+    
+    width: 10%;
+    background: none;
+    border: none;
+
+}
+.h-banner-search-btn:hover{
+    text-shadow: 0px 0px 15px rgb(3, 3, 22);
+}
+.h-user-row{
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+}
+.h-user-shortcut{
+    width: 70%;
+}
+.h-user-shortcut-con{
+    display: flex;
+    color: white;
+    margin: 0;
+
+}
+.container{
+    padding-top: 20px;
+    margin-top: 40px;
+    background: white;
+    box-shadow: 2px 5px 15px rgb(141, 129, 129);
+    border-radius: 10px;
+    
+}
+.h-main-con .h-main-row{
+    margin: 10px 20px 0 20px;
+}
+
+.h-secondary-row{
+    margin: 10px 20px 0 5px;
+}
+/* main */
+
+.h-nav-top{
+    padding: 20px 0 20px 20px;
+    background:rgb(217, 241, 241) ;
+    border: 1px solid rgb(166, 190, 190);
+    display: flex;
+    align-items: center;
+}
+
+.h-topics-title{
+    margin-top: 20px;
+    padding: 20px 10px 20px 20px;
+    background:rgb(217, 241, 241) ;
+    border: 1px solid rgb(166, 190, 190);
+}
+
+.h-t-c-dis{
+    padding: 15px 10px 15px 20px;
+    position: relative;
+    border-bottom: 1px solid  rgb(166, 190, 190);
+}
+.h-t-t-t{
+    display: flex;
+    align-items: center;
+}
+.h-t-c-c{
+    padding-left: 25px;
+    padding-top: 10px;
+    font-size: 0.75em;
+}
+.h-most-asked{
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.h-quick-ask{
+    margin-top: 20px;
+    padding-top: 20px;
+    background: rgb(219, 223, 226);
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.h-user-img-title{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.h-user-img-title:hover{
+    cursor: pointer;
+}
+.h-user-img-comment{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.h-comment-log{
+    margin-top: 10px;
+    display: none;
+    padding-left: 20px;
+}
+.h-c-l-comment{
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+.h-delete-comment{
+    position: absolute;
+    top:5px;
+    right:5px;
+}
+.h-delete-comment:hover{
+    cursor: pointer;
+}
+
+.h-form{
+    display: flex;
+}
+
+.h-form input{
+    flex: 80%;
+    border: none;
+    box-shadow: -2px 2px 5px rgb(223, 195, 195);
+    padding: 4px 0 4px 20px;
+    border-radius: 10px;
+}
+.h-form input:focus{
+    outline: none;
+}
+
+.h-most-asked{
+    background: rgb(219, 223, 226);
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+.h-m-a-post, .h-m-a-title{
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(97, 97, 97);
+    
+}
+.h-q-a-title{
+    border-bottom: 1px solid rgb(97, 97, 97);
+}
+.h-m-a-post:last-child{
+    margin-top: 20px;
+    border-bottom: none;
+
+}
+
+.h-p-i{
+    font-size: 0.75em;
+    color: gray;
+    font-style: italic;
+}
+
+.h-member{
+    background: rgb(219, 223, 226);
+    margin-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+.h-member{
+    padding: 20px 0 20px 20px;
+    
+}
+.h-member div{
+    margin-bottom: 10px;
+}
+#h-tabs-login{
+    margin-top: 20px;
+}
+
+.h-tab-login-form form{
+    padding: 10px 5px 10px 5px;
+}
+.h-tab-login-form table{
+    margin: 10px auto;
+    
+}
+.h-tab-login-form table tbody input{
+    margin: 5px;
+}
+
+.h-text-input{
+    padding: 5px 0 5px 4px;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 233, 248);
+}
+.h-text-input:focus{
+    outline: rgb(171, 176, 180);
+}
+.h-tab-login-form{
+    padding-bottom: 20px;
+
+}
+.h-tab-login-form h3{
+    text-align: center;
+}
+
+
+
+#h-tabs-register{
+    margin-top: 20px;
+}
+
+.h-tab-register-form form{
+    padding: 10px 5px 10px 5px;
+}
+.h-tab-register-form table{
+    margin: 10px auto;
+    
+}
+.h-tab-register-form table tbody input{
+    margin: 5px;
+}
+
+.h-tab-register-form{
+    padding-bottom: 20px;
+
+}
+.h-tab-register-form h3{
+    text-align: center;
+}
+
+
+
+/* .h-col-7{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.h-col-7 a:first-child{
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.h-badge{
+    /* margin-left: 15px; */
+    padding: 5px;
+}
+
+.h-pagination{
+    margin-top: 20px;
+}
+
+
+.h-topics-content-title{
+    padding: 0px;
+}
+
+.h-add-quest-text{
+    width: 100%;
+}
+
+.h-add-qq-body > form > div:last-child{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.h-add-qq-body > form > div:last-child > button{
+    padding: 5px 10px;
+    background-color: rgb(18, 109, 136);
+    border-radius: 5px;
+    border:none;
+}
+.h-qq-modal-header > div{
+    margin: auto;
+}
+.h-add-qq-body > form > div:last-child > button:hover{
+    background: rgb(11, 164, 211);
+}
+.h-index-home{
+    color: white;
+}
+.h-index-home:hover{
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+/* article page */
+
+.h-article-comment-log{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.h-q-comment span{
+    width: 100%;
+    font-weight: bold;
+    padding-bottom: 5px;
+
+}
+
+.h-ar-post-wrapper{
+    border: 1px solid gray;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.512);
+    
+}
+.h-ar-post-header{
+    width: 100%;
+    display: flex;
+    padding: 10px 0 10px 15px;
+    
+    background:rgb(127, 136, 136);
+}
+.h-ar-post-header2{
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.h-ar-post-header2 div:first-child{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.h-ar-post-header2 p{
+    margin-bottom: 8px;
+}
+
+.h-user-detailed-img{
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.712);
+    border-radius: 2px;
+}
+
+.h-ar-t-c-dis{
+    padding: 15px 0px 15px 0px;
+}
+
+.h-ar-post-content{
+    position: relative;
+    padding: 10px 0 15px 20px;
+    background: rgba(217, 241, 241,0.8);
+}
+
+.h-ar-post-content > div:last-child{
+    border-top: 1px solid rgb(197, 185, 185);
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+}
+.h-ar-post-content > div:last-child div:first-child{
+    width: 70%;
+}
+
+.h-ar-post-content > div:last-child div:last-child{
+    width: 20%;
+}
+.h-ar-post-c-content{
+    position: relative;
+    border-bottom: 1px solid gray;
+    width: 100%;
+}
+.h-ar-post-c-content img{
+    width: 90%;
+}
+/* .h-ar-post-c-content .image{
+    text-align: center;
+} */
+.h-ar-post-comment{
+    display: flex;
+    margin-left: 15px;
+    padding: 0px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+   
+}
+
+.h-ar-post-comment div:first-child{
+    background: rgb(85, 110, 85);
+    padding: 10px 6px;
+}
+
+.h-ar-post-comment div:last-child{
+    padding: 10px 10px 10px 15px;
+}
+
+.h-ar-p-c-username{
+    color: rgb(55, 29, 228);
+    margin: 0;
+}
+
+
+.h-ar-p-c-date{
+    font-size: 0.75em;
+    padding: 0px;
+    margin: 0;
+}
+.h-ar-p-c-datetime{
+    margin-left: 15px;
+
+}
+
+
+/* create */
+
+.h-cr-row{
+    width: 90%;
+    margin: 30px auto;
+}
+.h-cr-title input{
+    padding: 10px 20px;
+    font-size: 1.4em;
+    width: 60%;
+    margin: 10px 10px 10px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.h-cr-title input:focus{
+    background: rgb(228, 222, 222);
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.h-cr-des input:focus{
+    background: rgb(228, 222, 222);
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.h-cr-des input{
+    padding: 10px 20px;
+    font-size: 1.4em;
+    width: 80%;
+    margin: 10px 10px 20px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.h-cr-body textarea{
+    padding: 10px 10px;
+    font-size: 1.4em;
+    width: 100%;
+    margin: 10px;
+}
+
+.h-cr-submit{
+    display: flex;
+    justify-content: flex-end;
+}
+.h-cr-submit button{
+    background: rgb(116, 116, 248);;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.h-cr-submit button:hover{
+    border: none;
+    color: white;
+    background: rgb(55, 55, 221);
+    transition: all 0.5s;
+}
+.h-cr-submit button:active{
+    color:white;
+    outline: none;
+    transform: scaleX(0.95);
+    background: rgb(8, 8, 63);;
+}
+
+.h-cr-select{
+    margin: 10px 10px 20px 20px;
+    
+}
+.h-cr-select span{
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
+.h-cr-select select{
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.h-cr-select select:focus{
+    outline: none;
+    border: 1px solid rgb(56, 54, 54);
+}
+
+.h-nav-link a{
+    color: white;
+}
+
+.h-nav-link{
+    margin: 0px 10px
+}
+
+.h-nav-link a:hover{
+    color: rgb(19, 188, 255);
+}
+
+.h-article-body img{
+    max-width: 80%;
+}
+.h-article-body{
+    padding-right: 20px;
+    text-align: justify;
+}
+.h-t-c-c .h-a{
+    margin-right: 20px;
+}
+
+.h-t-c-c span:hover{
+    cursor: pointer;
+}
+
+.h-comment-log-con > div{
+    padding: 5px 0 5px 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* background-color: rgb(206, 222, 228); */
+}
+
+.h-user-edit-con > form > div{
+    display: flex;
+    margin: 5px 0;
+}
+.h-user-edit-con > form input{
+    border: none;
+    background-color: rgb(230, 220, 220);
+    width: 40%;
+    padding: 5px;
+}
+
+.h-user-edit-con > form select{
+    border: none;
+    background-color: rgb(230, 220, 220);
+    width: 40%;
+    padding: 5px;
+}
+.h-user-edit-con > form > div > p{
+    font-weight: bold;
+    width: 50%;
+}
+.h-user-edit-save{
+    background-color: rgb(13, 109, 235) !important;
+    color: white;
+}
+.h-user-edit-save:hover{
+    background: rgb(17, 46, 126) !important;
+}
+
+.h-waiting-alert{
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: 30px;
+}
+
+.h-waiting-alert > div{
+    margin-bottom: 0px;
+    
+}
+
+#forumSearchModal > .modal-dialog{
+    max-width: 50%;
+}
+
+.h-btn-comment-submit{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin-top:20px
+}
+
+.h-btn-comment-submit > input{
+    padding: 5px 10px;
+    font-size: 1.2em;
+
+}
+
+.h-c-l-comment img{
+    width: 80%;
+    margin-top: 10px;
+}
+
+.h-t-c-options{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 99;
+}
+.h-t-c-options i{
+    padding: 6px;
+}
+.h-t-c-options i:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 991px){
+    .h-user-row{
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 767px){
+    .h-ar-post-header2 div:first-child{
+        position: static;
+    }
+}
+@media (max-width: 499px){
+    .h-t-t-t-time{
+        display: none;
+    }
+}
