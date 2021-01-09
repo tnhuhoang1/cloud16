@@ -1,0 +1,285 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a:hover{
+    text-decoration: none;  
+}
+.h-ad-form{
+    padding: 20px 10px;
+}
+
+.h-ad-login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-ad-login input{
+    display: block;
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+.h-ad-login input:focus{
+    outline: 1px solid green;
+}
+
+.h-ad-login button{
+    margin-top: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+.h-ad-login button:hover{
+    cursor: pointer;
+}
+.main-container{
+    color:gray;
+}
+.h-nav-top-p{
+    background-color: rgb(15, 85, 58);
+}
+.h-nav-top{
+    display: flex;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+    
+}
+.h-nav-top li{
+    padding: 0 10px;
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.h-nav-top li:hover{
+    background-color: rgb(10, 126, 55);
+}
+.h-nav-top li a{
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+/* .h-row-main{
+    background: rgb(2, 56, 70);
+} */
+
+.h-main-content{
+    box-shadow: 0px 0px 10px rgb(3, 126, 115);
+    padding: 4%;
+    width: 80%;
+    margin: 0px auto;
+    background: rgb(147, 197, 226);
+    color: rgb(54, 49, 49);
+}
+
+.h-flex-verticle{
+    display: flex;
+}
+
+.h-user-title{
+    width: 80%;
+    margin: auto;
+    background: rgb(76, 160, 194);
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+.h-user-content{
+    text-align: center;
+    width: 80%;
+    background: rgb(194, 209, 219);
+    margin: auto;
+    padding: 5px;
+}
+.h-user-title > div:nth-child(1){
+    width: 7%;
+}
+.h-user-title > div:nth-child(2){
+    width: 35%;
+}
+.h-user-title > div:nth-child(3){
+    width: 25%;
+}
+.h-user-title > div:nth-child(4){
+    width: 25%;
+}
+.h-user-title > div:nth-child(5){
+    width: 8%;
+}
+.h-user-content > div:nth-child(1){
+    width: 7%;
+}
+.h-user-content > div:nth-child(2){
+    width: 35%;
+}
+.h-user-content > div:nth-child(3){
+    width: 25%;
+}
+.h-user-content > div:nth-child(4){
+    width: 25%;
+}
+.h-user-content > div:nth-child(5){
+    width: 8%;
+}
+
+.h-return-home{
+    background-color: rgb(0, 97, 97);
+    text-align: center;
+    font-size: 2em;
+    padding: 5px;
+}
+.h-return-home a{
+    color:white;
+}
+.h-return-home a:hover{
+    color: darkblue;
+}
+.h-btn{
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    border: none;
+}
+
+.h-btn:focus{
+    outline: 0px;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+}
+
+.h-btn-adduser{
+    margin: 10px 0;
+}
+.h-btn-adduser:hover{
+    background: rgb(10, 92, 185);
+    color: white;
+}
+.h-btn-adduser:focus{
+    background: rgb(5, 60, 122);
+    color: white;
+}
+
+.h-alert{
+    background: rgb(175, 60, 6);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.h-ad-delete-user-icon{
+    color: rgb(92, 7, 7);
+}
+.h-ad-delete-user-icon:hover{
+    color: red;
+    cursor: pointer;
+}
+.h-disabled{
+    color: gray !important;
+}
+
+.h-cate-title > div:nth-child(1){
+    width: 10%;
+}
+.h-cate-title > div:nth-child(2){
+    width: 50%;
+}
+.h-cate-title > div:nth-child(3){
+    width: 20%;
+}
+.h-cate-title > div:nth-child(4){
+    width: 20%;
+}
+.h-cate-content > div:nth-child(1){
+    width: 10%;
+}
+.h-cate-content > div:nth-child(2){
+    width: 50%;
+}
+.h-cate-content > div:nth-child(3){
+    width: 20%;
+}
+.h-cate-content > div:nth-child(4){
+    width: 20%;
+}
+
+.h-title{
+    width: 80%;
+    margin: auto;
+    background: rgb(76, 160, 194);
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+.h-content{
+    text-align: center;
+    width: 80%;
+    background: rgb(194, 209, 219);
+    margin: auto;
+    padding: 5px;
+}
+
+.h-sub-cate-title > div:nth-child(1){
+    width: 10%;
+}
+.h-sub-cate-title > div:nth-child(2){
+    width: 40%;
+}
+.h-sub-cate-title > div:nth-child(3){
+    width: 30%;
+}
+.h-sub-cate-title > div:nth-child(4){
+    width: 10%;
+}
+.h-sub-cate-title > div:nth-child(5){
+    width: 10%;
+}
+.h-sub-cate-content > div:nth-child(1){
+    width: 10%;
+}
+.h-sub-cate-content > div:nth-child(2){
+    width: 40%;
+}
+.h-sub-cate-content > div:nth-child(3){
+    width: 30%;
+}
+.h-sub-cate-content > div:nth-child(4){
+    width: 10%;
+}
+.h-sub-cate-content > div:nth-child(5){
+    width: 10%;
+}
+
+.h-modal input, .h-modal button,.h-modal select{
+    margin: 5px;
+    padding: 5px;
+}
+
+.fa-edit:hover , .fa-trash:hover{
+    cursor: pointer;
+    color: green;
+}
+
+#adArticle input, #adArticle button{
+    padding: 5px;
+    margin: 5px 5px 5px 0;
+}
+#editorAddArticle{
+    padding: 5px;
+    margin: 5px 5px 5px 0;
+}
+#adArticle select{
+    padding: 5px;
+    margin: 5px 5px 5px 0;
+}
+
+.h-a-dark{
+    color: black;
+}

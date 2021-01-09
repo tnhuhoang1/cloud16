@@ -2,7 +2,7 @@
 runtime: php72
 
 runtime_config:
-  document_root: test
+  document_root: cloud16
 # Defaults to "serve index.php" and "serve public/index.php". Can be used to
 # serve a custom PHP front controller (e.g. "serve backend/index.php") or to
 # run a long-running PHP script as a worker process (e.g. "php worker.php").
@@ -27,6 +27,18 @@ handlers:
 - url: /images
   static_dir: images
 
+- url: /database
+  static_dir: database
+
+- url: /userImages
+  static_dir: userImages
+
+- url: /ckfinder
+  static_dir: ckfinder
+
+- url: /ajax
+  static_dir: ajax
+
 # Serve images as static resources.
 - url: /(.+\.(gif|png|jpg))$
   static_files: \1
@@ -44,7 +56,7 @@ entrypoint:
     # GOOGLE_STORAGE_BUCKET: ""
     # populate these to use the "mysql" or "postres" backends
     # CLOUDSQL_CONNECTION_NAME: ""
-    # CLOUDSQL_USER: ""
-    # CLOUDSQL_PASSWORD: ""
+    # CLOUDSQL_USER: "root"
+    # CLOUDSQL_PASSWORD: "database16"
     ## Uncomment to give your database a name other than "bookshelf"
-    # CLOUDSQL_DATABASE_NAME: ""
+    # CLOUDSQL_DATABASE_NAME: "forum"
