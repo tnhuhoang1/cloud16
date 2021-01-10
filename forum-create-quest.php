@@ -151,7 +151,7 @@ include("./forum/head.php");
         ClassicEditor
          .create( document.querySelector( '#editor1' ), {
              ckfinder: {
-                 uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+                 uploadUrl: '/cloud16/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
              },
              
              toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ]
