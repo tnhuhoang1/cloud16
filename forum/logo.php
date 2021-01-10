@@ -10,9 +10,9 @@
                         <!-- <li class="h-li" role="button" data-toggle="modal" data-target="#quickQuestionModal"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Tao cau hoi nhanh k can dang nhap"> Tao cau hoi</i></li> -->
                         <?php
                             if(isset($_SESSION['username'])){
-                                echo '<li class="h-li h-nav-link"><a href="forum-create-quest.php" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Tao cau hoi hoac thong bao" > Tao cau hoi</i></a></li>';
+                                echo '<li class="h-li h-nav-link"><a href="forum-create-quest.php" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Tao cau hoi hoac thong bao" >Them bai viet</i></a></li>';
                             }else{
-                                echo '<li class="h-li h-nav-link"><a href="#" type="button" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Dang nhap de tao cau hoi" > Tao cau hoi</i></a></li>';
+                                echo '<li class="h-li h-nav-link"><a href="#" type="button" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Dang nhap de tao cau hoi" >Them bai viet</i></a></li>';
                             }
                         ?>
                         

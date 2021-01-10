@@ -1,14 +1,14 @@
 <?php
     session_start();
-    require_once('./database/database-function.php');
     $_SESSION['path'] = 'info';
     if(!isset($_GET['user_id'])){
         header('location: forum.php');
     }
+    require_once('./database/database-function.php');
     if(isset($_POST['uploadSubmit']) && isset($_GET['user_id'])){
         $sql = "select name from users where user_id = ?";
         $name = simpleQuery($sql, 1, [$_GET['user_id']]);
-        $targetDir = "./userImages/";
+        $targetDir = __DIR__."./userImages/";
         $typeOfFile = pathinfo($_FILES['userImage']['name'], PATHINFO_EXTENSION);
         if(count($name) > 0){
             $targetFile = $targetDir . $name[0]['name'].'.'.$typeOfFile;
@@ -20,23 +20,26 @@
         // getImage
         if($typeOfFile == 'jpg' || $typeOfFile == 'png' || $typeOfFile == 'jpeg' || $typeOfFile == 'gif'){
             if(file_exists($targetFile)){
-                unlink($targetFile);
+                // unlink($targetFile);
+                cout($_FILES['userImage']);
+                echo "ton tai";
             }
-                if($_FILES['userImage']['size'] > 1500000){
-                    echo "<script>alert('Dung luong file qua lon');</script>";
-                    $update = 0;
-                }else{
-                    if($update == 1){
-                        if(move_uploaded_file($_FILES['userImage']['tmp_name'], $targetFile)){
-                            $sql = "update user_info set img = ? where user_id = ?";
-                            simpleQuery($sql, 0 , [$targetFile, $_GET['user_id']]);
+            // if($_FILES['userImage']['size'] > 1500000){
+            //     echo "<script>alert('Dung luong file qua lon');</script>";
+            //     $update = 0;
+            // }else{
+            //     if($update == 1){
+            //         if(move_uploaded_file($_FILES['userImage']['tmp_name'], $targetFile)){
+            //             $sql = "update user_info set img = ? where user_id = ?";
+            //             simpleQuery($sql, 0 , [$targetFile, $_GET['user_id']]);
 
-                            echo "<script>alert('Upload thanh cong');</script>";
-                        }else{
-                            echo "<script>alert('Co loi xay ra');</script>";
-                        }
-                    }
-                }
+            //             echo "<script>alert('Upload thanh cong reload lai trang de kiem tra');</script>";
+            //         }else{
+            //             echo "<script>alert('Co loi xay ra');</script>";
+            //         }
+            //     }
+            // }
+            echo "vao day";
             
         }else{
             echo "<script>alert('K phai file anh');</script>";
