@@ -24,6 +24,7 @@
                 // unlink($targetFile);
                 echo "ton tai";
             }
+            cout($targetFile);
             // if($_FILES['userImage']['size'] > 1500000){
             //     echo "<script>alert('Dung luong file qua lon');</script>";
             //     $update = 0;
