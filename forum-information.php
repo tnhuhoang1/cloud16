@@ -9,14 +9,17 @@
         $sql = "select name from users where user_id = ?";
         $name = simpleQuery($sql, 1, [$_GET['user_id']]);
         $targetDir = __DIR__."/userImages/";
+        $reDir = "./userImages/";
         $typeOfFile = pathinfo($_FILES['userImage']['name'], PATHINFO_EXTENSION);
+        $update = 1;
         if(count($name) > 0){
             $targetFile = $targetDir . $name[0]['name'].'.'.$typeOfFile;
         }else{
             $targetFile = $targetDir . $_FILES['userImage']['name'];
+            $update = 0;
         }
         
-        $update = 1;
+        
         // getImage
         if($typeOfFile == 'jpg' || $typeOfFile == 'png' || $typeOfFile == 'jpeg' || $typeOfFile == 'gif'){
             // cout($_FILES['userImage']);
@@ -31,9 +34,9 @@
             }else{
                 if($update == 1){
                     if(move_uploaded_file($_FILES['userImage']['tmp_name'], $targetFile)){
+                        $targetFile2 = $reDir . $name[0]['name'].'.'.$typeOfFile;
                         $sql = "update user_info set img = ? where user_id = ?";
-                        simpleQuery($sql, 0 , [$targetFile, $_GET['user_id']]);
-
+                        simpleQuery($sql, 0 , [$targetFile2, $_GET['user_id']]);
                         echo "<script>alert('Upload thanh cong! Reload lai trang de kiem tra');</script>";
                     }else{
                         echo "<script>alert('Co loi xay ra');</script>";
