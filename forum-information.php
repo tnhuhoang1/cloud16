@@ -8,7 +8,7 @@
     if(isset($_POST['uploadSubmit']) && isset($_GET['user_id'])){
         $sql = "select name from users where user_id = ?";
         $name = simpleQuery($sql, 1, [$_GET['user_id']]);
-        $targetDir = __DIR__."./userImages/";
+        $targetDir = __DIR__."/userImages/";
         $typeOfFile = pathinfo($_FILES['userImage']['name'], PATHINFO_EXTENSION);
         if(count($name) > 0){
             $targetFile = $targetDir . $name[0]['name'].'.'.$typeOfFile;
