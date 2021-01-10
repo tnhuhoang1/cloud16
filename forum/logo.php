@@ -177,9 +177,16 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                     <?php
                                         if(isset($_SESSION['status'])){
-                                            echo '<div class="dropdown-header h-user-username">
-                                                <img src="images/i1.jpg"  class="h-user-avatar">
-                                                <h6>'.$_SESSION['username'].'</h6>
+                                            $sql = "select img from user_info where user_id = ?";
+                                            $info = simpleQuery($sql, 1, [$_SESSION['user_id']]);
+                                            echo '<div class="dropdown-header h-user-username">';
+                                                if(count($info) > 0){
+                                                    echo '<img src="'.$info[0]['img'].'"  class="h-user-avatar">';
+                                                }else{
+                                                    echo '<img src="images/i1.jpg"  class="h-user-avatar">';
+                                                }
+                                                
+                                                echo '<h6>'.$_SESSION['username'].'</h6>
                                             </div>';
                                             if($_SESSION['role'] == 1){
                                                 echo '<button class="dropdown-item" type="button"><a href="forum/admin/forum.php" class="h-a">Bang thong ke</a></button>';
