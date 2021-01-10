@@ -19,20 +19,20 @@
         $update = 1;
         // getImage
         if($typeOfFile == 'jpg' || $typeOfFile == 'png' || $typeOfFile == 'jpeg' || $typeOfFile == 'gif'){
-            // cout($_FILES['userImage']);
+            cout($_FILES['userImage']);
             if(file_exists($targetFile)){
                 unlink($targetFile);
-                // echo "ton tai";
+                echo "ton tai";
             }
-            // cout($targetFile);
+            cout($targetFile);
             if($_FILES['userImage']['size'] > 1500000){
                 echo "<script>alert('Dung luong file qua lon');</script>";
                 $update = 0;
             }else{
                 if($update == 1){
                     if(move_uploaded_file($_FILES['userImage']['tmp_name'], $targetFile)){
-                        $sql = "update user_info set img = ? where user_id = ?";
-                        simpleQuery($sql, 0 , [$targetFile, $_GET['user_id']]);
+                        // $sql = "update user_info set img = ? where user_id = ?";
+                        // simpleQuery($sql, 0 , [$targetFile, $_GET['user_id']]);
 
                         echo "<script>alert('Upload thanh cong! Reload lai trang de kiem tra');</script>";
                     }else{
@@ -40,7 +40,7 @@
                     }
                 }
             }
-            // echo "vao day";
+            echo "vao day";
             
         }else{
             echo "<script>alert('K phai file anh');</script>";
