@@ -19,9 +19,9 @@
         $update = 1;
         // getImage
         if($typeOfFile == 'jpg' || $typeOfFile == 'png' || $typeOfFile == 'jpeg' || $typeOfFile == 'gif'){
+            cout($_FILES['userImage']);
             if(file_exists($targetFile)){
                 // unlink($targetFile);
-                cout($_FILES['userImage']);
                 echo "ton tai";
             }
             // if($_FILES['userImage']['size'] > 1500000){
