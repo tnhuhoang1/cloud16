@@ -2,11 +2,15 @@
     require_once("function.php");
     if(isset($_POST['username'])){
         $sql = "select user_id from users where name = ? or email = ?";
-        $username = htmlentities($_GET["res-username"]);
+        $username = htmlentities($_POST["username"]);
         $username = trim($username);
-        $email = $_GET["res-email"];
+        $email = $_POST["email"];
+        $password = $_POST['password'];
+        $password = htmlentities($password);
         $record = simpleQuery($sql,1, [$username, $email]);
         if(count($record) == 0){
+            $sql = "insert into users set name = ?, password = ?, email = ?";
+            simpleQuery($sql, 0, [$username, $password, $email]);
             echo "ok";
         }else{
             $sql = "select user_id from users where name = ?";
