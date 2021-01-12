@@ -51,7 +51,7 @@
             array_push($categories, $cate);
         }
         echo json_encode($categories);
-    }else if(isset($_POST['get_subcategories'])){
+    }else if(isset($_GET['get_subcategories'])){
         $sql = "select article_id, title, view_count, user_id from articles where sub_cate_id = ?";
         $sub_cate_id = $_GET['get_subcategories'];
         $articles = simpleQuery($sql, 1, [$sub_cate_id]);
@@ -73,10 +73,11 @@
             $subcate['sub_cate_id'] = $sub_cate_id;
             $subcate['user_name'] = $user[0]['name'];
             $subcate['user_id'] = $v['user_id'];
+            $subcate['view_count'] = $v['view_count'];
             array_push($subcategory, $subcate);
         }
         echo json_encode($subcategory);
-    }else if(isset($_POST['get_main_subcategories'])){
+    }else if(isset($_GET['get_main_subcategories'])){
         $sql = "select s.title as subTitle, c.title as cateTitle from sub_categoris as s, categoris as c where s.sub_cate_id = ? and s.cate_id = c.cate_id";
         $result = simpleQuery($sql, 1, [$_GET['get_main_subcategories']]);
         $arr = [];
