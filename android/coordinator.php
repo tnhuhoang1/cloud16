@@ -51,6 +51,39 @@
             array_push($categories, $cate);
         }
         echo json_encode($categories);
+    }else if(isset($_POST['get_subcategories'])){
+        $sql = "select article_id, title, view_count, user_id from articles where sub_cate_id = ?";
+        $sub_cate_id = $_GET['get_subcategories'];
+        $articles = simpleQuery($sql, 1, [$sub_cate_id]);
+        $subcategory = array();
+        foreach($articles as $v){
+            $sql = "select count(user_id) as sl from like_action where article_id = ?";
+            $likeCount = simpleQuery($sql, 1, [$v['article_id']]);
+            $sql = "select count(user_id) as sl from comments where article_id = ?";
+            $commentCount = simpleQuery($sql, 1, [$v['article_id']]);
+            $sql = "select name from users where user_id = ?";
+            $user = simpleQuery($sql, 1, [$v['user_id']]);
+
+            $subcate = [];
+
+            $subcate['article_id'] = $v['article_id'];
+            $subcate['article_title'] = $v['title'];
+            $subcate['like_count'] = $likeCount[0]['sl'];
+            $subcate['comment_count'] = $commentCount[0]['sl'];
+            $subcate['sub_cate_id'] = $sub_cate_id;
+            $subcate['user_name'] = $user[0]['name'];
+            $subcate['user_id'] = $v['user_id'];
+            array_push($subcategory, $subcate);
+        }
+        echo json_encode($subcategory);
+    }else if(isset($_POST['get_main_subcategories'])){
+        $sql = "select s.title as subTitle, c.title as cateTitle from sub_categoris as s, categoris as c where s.sub_cate_id = ? and s.cate_id = c.cate_id";
+        $result = simpleQuery($sql, 1, [$_GET['get_main_subcategories']]);
+        $arr = [];
+        $arr['cate_title'] = $result[0]['cateTitle'];
+        $arr['sub_cate_title'] = $result[0]['subTitle'];
+        $arrr[0] = $arr;
+        echo json_encode($arrr);
     }
 
 ?>
