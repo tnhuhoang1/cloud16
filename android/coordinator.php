@@ -32,6 +32,25 @@
         
         }   
         echo json_encode($posts);
+    }else if(isset($_POST['get_categories'])){
+        // $sql = "select c.title as cateTitle, s.title as subcateTitle, count(a.article_id) as sl from categoris as c, sub_categoris as s, articles as a where c.cate_id = s.cate_id and a.sub_cate_id = s.sub_cate_id";
+        $sql = "select * from sub_categoris";
+        $result = simpleQuery($sql);
+        $categories = array();
+        foreach($result as $v){
+            $cate = [];
+            $sql = "select title as cateTitle from categoris where cate_id = ?";
+            $sub = simpleQuery($sql, 1, [$v['cate_id']]);
+            $sql = "select count(article_id) as sl from articles where sub_cate_id = ?";
+            $sl = simpleQuery($sql, 1, [$v['sub_cate_id']]);
+
+            $cate['cate_title'] = $sub[0]['cateTitle'];
+            $cate['subcate_title'] = $v['title'];
+            $cate['post_count'] = $sl[0]['sl'];
+            $cate['sub_cate_id'] = $v['sub_cate_id'];
+            array_push($categories, $cate);
+        }
+        echo json_encode($categories);
     }
 
 ?>
