@@ -10,6 +10,7 @@
         $record = simpleQuery($sql,1, [$username, $email]);
         if(count($record) == 0){
             $sql = "insert into users set name = ?, password = ?, email = ?";
+            $password = password_hash($password, PASSWORD_DEFAULT);
             simpleQuery($sql, 0, [$username, $password, $email]);
             echo "ok";
         }else{
