@@ -27,7 +27,7 @@
         $title = $_POST['title'];
         $des = $_POST['des'];
         $sub_cate_id = $_POST['sub_cate_id'];
-        $sql = "insert into articles set title =?, des = ?, user_id = ?, sub_cate_id = ?";
+        $sql = "insert into articles set title =?, description = ?, user_id = ?, sub_cate_id = ?";
         simpleQuery($sql, 0 , [$title, $des, $user_id, $sub_cate_id]);
         echo "ok";
     }else{

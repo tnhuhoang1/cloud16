@@ -12,7 +12,7 @@
         $sql = "select count(user_id) as sl from comments where article_id =?";
         $commentCount = simpleQuery($sql, 1, [$article[0]['article_id']]);
 
-        $sql = "select * from comments where user_id = ? and article_id = ?";
+        $sql = "select * from like_action where user_id = ? and article_id = ?";
         $isLike = simpleQuery($sql, 1, [$_GET['user_id'], $_GET['article_id']]);
         if(count($isLike) > 0){
             $isLike = "true";
