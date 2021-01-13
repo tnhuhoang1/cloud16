@@ -22,6 +22,14 @@
         }
         echo json_encode($result);
         
+    }else if(isset($_POST['user_id'])){
+        $user_id = $_POST['user_id'];
+        $title = $_POST['title'];
+        $des = $_POST['des'];
+        $sub_cate_id = $_POST['sub_cate_id'];
+        $sql = "insert into articles set title =?, des = ?, user_id = ?, sub_cate_id = ?";
+        simpleQuery($sql, 0 , [$title, $des, $user_id, $sub_cate_id]);
+        echo "ok";
     }else{
         echo "Error";
     }
