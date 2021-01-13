@@ -19,7 +19,10 @@
         array_push($result, $i);
         echo json_encode($result);
         
-    }else{
+    }else if(isset($_POST['real_name'])){
+        cout($_POST);
+    }
+    else{
         echo "Error";
     }
 
