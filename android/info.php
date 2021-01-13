@@ -20,7 +20,19 @@
         echo json_encode($result);
         
     }else if(isset($_POST['real_name'])){
-        cout($_POST);
+        $realName = $_POST['real_name'];
+        $birth = $_POST['birth'];
+        $birth = date_format(date_create($birth),'Y-m-d');
+        $gender = $_POST['gender'];
+        $user_id = $_POST['user_id'];
+        if(strtolower($gender) == "nam"){
+            $gender = 1;
+        }else{
+            $gender = 0;
+        }
+        $sql = "update user_info set real_name = ?, birth = ?, gender = ? where user_id = ?";
+        simpleQuery($sql, 0, [$realName, $birth, $gender, $user_id]);
+        echo "ok";
     }
     else{
         echo "Error";
