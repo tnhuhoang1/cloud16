@@ -26,7 +26,8 @@
         
         echo json_encode($result);
         
-    }else{
+    }
+    else{
         echo "Error";
     }
 
