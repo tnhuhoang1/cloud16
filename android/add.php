@@ -13,10 +13,10 @@
         
     }else if(isset($_GET['cate_id'])){
         $sql = "select sub_cate_id, title from sub_categoris where cate_id = ?";
-        $cate = simpleQuery($sql, 1, [$_GET['sub_cate_id']]);
+        $cate = simpleQuery($sql, 1, [$_GET['cate_id']]);
         $result = [];
         foreach($cate as $v){
-            $a['sub_cate_id'] = $v['cate_id'];
+            $a['sub_cate_id'] = $v['sub_cate_id'];
             $a['title'] = $v['title'];
             array_push($result, $a);
         }
