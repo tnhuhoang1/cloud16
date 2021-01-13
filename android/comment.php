@@ -16,7 +16,7 @@
                 $a['comment_content'] = $v['content'];
             }
             if($v['detail'] == null){
-                $a['comment_content'] = "";
+                $a['detail'] = "";
             }else{
                 $a['detail'] = htmlentities($v['detail']);
             }
