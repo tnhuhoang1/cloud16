@@ -102,7 +102,7 @@ include("forum/head.php");
                                                                 $userDate = date_format(date_create($user[0]['create_at']),'d-m-Y');
 
                                                             echo '<p>'.$user[0]['name'].'</p>
-                                                            <p>Ngay tham gia: '.$userDate.'</p>
+                                                            <p>Ngày tham gia: '.$userDate.'</p>
                                                         </div>
                                                     </div>
                                                     
@@ -113,7 +113,7 @@ include("forum/head.php");
                                                                 <div class="dropdown">
                                                                     <i class="fas fa-ellipsis-h" id="dropdownArticleOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                                                                     <div class="dropdown-menu" aria-labelledby="dropdownArticleOption">
-                                                                        <a class="dropdown-item" href="#" onclick="adDeleteArticle('.$_GET['article_id'].')">Xoa cau hoi</a>
+                                                                        <a class="dropdown-item" href="#" onclick="adDeleteArticle('.$_GET['article_id'].')">Xóa câu hỏi</a>
                                                                         
                                                                     </div>
                                                                 </div>
@@ -144,21 +144,21 @@ include("forum/head.php");
                                                                 if(isset($_SESSION['username'])){
                                                                     if($isLike[0]['sl'] == 0){
                                                                         echo '</span> <i class="far fa-thumbs-up"></i>
-                                                                    Thich</a>'; 
+                                                                    Thích</a>'; 
                                                                     }else{
                                                                         echo '</span> <i class="fa-thumbs-up on fas"></i>
-                                                                Thich</a>';
+                                                                Thích</a>';
                                                                     }
                                                                 }else{
                                                                     echo '</span> <i class="far fa-thumbs-up"></i>
-                                                                Thich</a>';
+                                                                Thích</a>';
                                                                 }
                                                                 
                                                             
                                                                 if(isset($_SESSION['user_id'])){
-                                                                    echo '<span role="button" style="margin-left: 20px" data-toggle="modal" data-target="#forumSearchModal" class="h-a"><i class="far fa-comments"></i> Tra Loi</span>';
+                                                                    echo '<span role="button" style="margin-left: 20px" data-toggle="modal" data-target="#forumSearchModal" class="h-a"><i class="far fa-comments"></i> Trả lời</span>';
                                                                 }else{
-                                                                    echo '<span role="button" style="margin-left: 20px" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="far fa-comments"></i> Tra Loi</span>';
+                                                                    echo '<span role="button" style="margin-left: 20px" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="far fa-comments"></i> Trả lời</span>';
                                                                 }
                                                                 
                                                                 
@@ -167,7 +167,7 @@ include("forum/head.php");
                                                             <div>';
                                                             $sql = "select count(user_id) as sl from comments where article_id = ?";
                                                             $comment = simpleQuery($sql, 1, [$_GET['article_id']]);
-                                                            echo $comment[0]['sl'].' binh luan';
+                                                            echo $comment[0]['sl'].' bình luận';
                                                             echo '</div>
                                                         </div>
                                                     </div>
@@ -199,7 +199,7 @@ include("forum/head.php");
                                                         <div class="h-ar-post-c-header2">
     
                                                             <p class="h-ar-p-c-username"><a href="forum-information.php?user_id='.$v['user_id'].'" class="h-a">'.$user[0]['name'].'</a></p>
-                                                            <p class="h-ar-p-c-date">Ngay tham gia: '.$userDate.'</p>
+                                                            <p class="h-ar-p-c-date">Ngày tham gia: '.$userDate.'</p>
                                                         </div>
                                                     </div>
                                                     
@@ -233,7 +233,7 @@ include("forum/head.php");
                                         
 
                                             <!-- <a href="" class="h-a"><i class="far fa-thumbs-up"></i>
-                                            <i class="fas fa-thumbs-up"></i>Thich</a>
+                                            <i class="fas fa-thumbs-up"></i>Thích</a>
                                             <span role="button" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="far fa-comments"></i> Tra Loi</span> -->
                                             <!-- Modal -->
                                             <div class="modal fade" id="forumSearchModal" data-backdrop="true" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

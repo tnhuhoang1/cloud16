@@ -1,6 +1,6 @@
 <div class="h-most-asked">
 <div class="h-m-a-title">
-    <h4>Cac cau hoi noi bat</h4>
+    <h4>Các câu hỏi nổi bật</h4>
 </div>
 <?php
     require_once("./database/database-function.php");

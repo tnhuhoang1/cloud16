@@ -5,8 +5,8 @@
     $slAr = simpleQuery($s);
     $s = "select count(user_id) as sl from users";
     $slU = simpleQuery($s);
-    echo '<div><a>So thanh vien: </a><span>'.$slU[0]['sl'].'</span></div>
-    <div><a>Tong so bai: </a><span>'.$slAr[0]['sl'].'</span></div>';
+    echo '<div><a>số thành viên: </a><span>'.$slU[0]['sl'].'</span></div>
+    <div><a>Tổng số bài: </a><span>'.$slAr[0]['sl'].'</span></div>';
     ?>
     
 

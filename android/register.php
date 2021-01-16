@@ -12,6 +12,11 @@
             $sql = "insert into users set name = ?, password = ?, email = ?";
             $password = password_hash($password, PASSWORD_DEFAULT);
             simpleQuery($sql, 0, [$username, $password, $email]);
+            $sql = "select user_id from users where name = ?";
+            $record2 = simpleQuery($sql, 1, [$username]);
+            $sql = "insert into user_info set user_id = ?, img = ?";
+            $img = "./userImages/user-default-img.png";
+            simpleQuery($sql, 0, [$record2[0]['user_id'], $img]);
             echo "ok";
         }else{
             $sql = "select user_id from users where name = ?";

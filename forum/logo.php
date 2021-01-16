@@ -10,20 +10,20 @@
                         <!-- <li class="h-li" role="button" data-toggle="modal" data-target="#quickQuestionModal"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Tao cau hoi nhanh k can dang nhap"> Tao cau hoi</i></li> -->
                         <?php
                             if(isset($_SESSION['username'])){
-                                echo '<li class="h-li h-nav-link"><a href="forum-create-quest.php" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Tao cau hoi hoac thong bao" >Them bai viet</i></a></li>';
+                                echo '<li class="h-li h-nav-link"><a href="forum-create-quest.php" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Tạo câu hỏi hoạc thông báo" > Thêm bài viết</i></a></li>';
                             }else{
-                                echo '<li class="h-li h-nav-link"><a href="#" type="button" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Dang nhap de tao cau hoi" >Them bai viet</i></a></li>';
+                                echo '<li class="h-li h-nav-link"><a href="#" type="button" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="fas fa-plus" data-toggle="tooltip" data-placement="bottom" title="Đặng nhập để tạo câu hỏi" > Thêm bài viết</i></a></li>';
                             }
                         ?>
                         
-                        <li class="h-li h-nav-link"><a href="forum-category.php" class="h-a" ><i class="fas fa-tags"> Danh muc</i></a></li>
+                        <li class="h-li h-nav-link"><a href="forum-category.php" class="h-a" ><i class="fas fa-tags"> Danh mục</i></a></li>
                         <?php
                             if(isset($_SESSION['status']) && $_SESSION['status'] == "logged"){
                                 // echo '<li class="h-li h-nav-link"><a href="forum-category.php" class="h-a" ><i class="fas fa-reply"> Chua tra loi</i></a></li>';
                             }
                         ?>
                         
-                        <li class="h-li h-nav-link"></li>
+                        <li class="h-li h-nav-link"><a href="https://drive.google.com/file/d/12-vKc5tmKc39U-Zzy9n3RBkxW8B_reHh/view?usp=sharing" class="h-a"><i class="fab fa-android"><strong> App điện thoại</strong></a></i></li>
                         <li class="h-li h-nav-link"></li>
                         <li class="h-li h-nav-link"></li>
                     </ul>
@@ -172,7 +172,7 @@
                             <li class="h-li">
                                 <div class="dropdown">
                                     <button class="h-b-account" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-users"></i> Tai khoan
+                                        <i class="fas fa-users"></i> Tài khoản
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                     <?php
@@ -189,18 +189,18 @@
                                                 echo '<h6>'.$_SESSION['username'].'</h6>
                                             </div>';
                                             if($_SESSION['role'] == 1){
-                                                echo '<button class="dropdown-item" type="button"><a href="forum/admin/forum.php" class="h-a">Bang thong ke</a></button>';
+                                                echo '<button class="dropdown-item" type="button"><a href="forum/admin/forum.php" class="h-a">Bảng thống kê</a></button>';
                                             }
                                         
                                             echo '<button class="dropdown-item" type="button"><a href="forum-information.php?user_id=';
                                             if(isset($_SESSION['user_id'])){
                                                 echo $_SESSION['user_id'];
                                             }
-                                            echo '" class="h-a">Thong tin</a></button>
-                                            <button class="dropdown-item" type="button"><a href="forum-members.php" class="h-a">Thanh vien</a></button>
-                                            <button class="dropdown-item" type="button" onclick="logout()" ><a href="#" class="h-a">Dang xuat</a></button>';
+                                            echo '" class="h-a">Thông tin</a></button>
+                                            <button class="dropdown-item" type="button"><a href="forum-members.php" class="h-a">Thành viên</a></button>
+                                            <button class="dropdown-item" type="button" onclick="logout()" ><a href="#" class="h-a">Đăng xuất</a></button>';
                                         }else{
-                                            echo '<button class="dropdown-item" type="button" data-toggle="modal" data-target="#replyModal">Dang nhap/Dang ki</button>';
+                                            echo '<button class="dropdown-item" type="button" data-toggle="modal" data-target="#replyModal">Đăng nhâp/Đăng ký</button>';
                                         }
                                         
                                         

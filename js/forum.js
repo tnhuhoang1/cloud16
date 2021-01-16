@@ -95,10 +95,10 @@ function resCheck(){
     var password = document.getElementById("res-password").value;
     var passwordConfirm = document.getElementById("res-password-confirm").value;
     if(val.search(/\W/i) == "" || val.search(/\W/i) >=0){
-        alert("Username k duoc chua ki tu dac biet");
+        alert("Username không được chứa kí tự đặc biệt");
         return false;
     }else if(password != passwordConfirm){
-        alert("Nhap lai password bi sai");
+        alert("Mật khẩu sai! ");
         return false;
     }else{
         var xmlhttp = new XMLHttpRequest();
@@ -114,7 +114,7 @@ function resCheck(){
                             var al = document.getElementById("h-full-alert");
                             if(this.responseText == "error"){
                                 
-                                al.firstElementChild.innerHTML = "<i class='fas fa-times'></i> Co loi, vui long kiem tra lai";
+                                al.firstElementChild.innerHTML = "<i class='fas fa-times'></i> Có lỗi, vui lòng kiểm trả lại";
                                 al.firstElementChild.style.color = "red";
                                 al.style.display = "flex";
                                 setTimeout(() => {
@@ -122,7 +122,7 @@ function resCheck(){
                                 }, 2000);
                                 return false;
                             }else if(this.responseText == "ok"){
-                                al.firstElementChild.innerHTML = "<i class='fas fa-check-circle'></i> Dang ki thanh cong";
+                                al.firstElementChild.innerHTML = "<i class='fas fa-check-circle'></i> Đăng kí thành công";
                                 al.style.display = "flex";
                                 errors.style.display = "none";
                                 
@@ -158,7 +158,7 @@ function logCheck(){
     var password = document.getElementById("log-password");
     var errors = document.getElementById("h-log-errors");
     if(username.value.search(/\W/i) == "" || username.value.search(/\W/i) >=0){
-        errors.innerHTML = "Username k duoc chua ki tu dac biet";
+        errors.innerHTML = "Username không được có kí tự đặc biệt";
         errors.style.display = "block";
         return false;
     }else{
@@ -168,7 +168,7 @@ function logCheck(){
             if(this.readyState == 4 && this.status == 200){
                 if(this.responseText == "ok"){
                     var al = document.getElementById("h-full-alert");
-                    al.firstElementChild.innerHTML = "<i class='fas fa-check-circle'></i> Dang nhap thanh cong";
+                    al.firstElementChild.innerHTML = "<i class='fas fa-check-circle'></i>Đăng nhập thành công";
                     al.style.display = "flex";
                     errors.style.display = "none";
                     
@@ -178,7 +178,7 @@ function logCheck(){
                     
                     return true;
                 }else{
-                    errors.innerHTML = "Sai ten tai khoan hoac mat khau";
+                    errors.innerHTML = "Sai tên tài khoản hoặc mật khẩu";
                     errors.style.display = "block";
                     return false;
                 }
@@ -202,7 +202,7 @@ function editUser(u_id){
     xml.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             if(this.responseText == "ok"){
-                alert("Luu thong tin thanh cong");
+                alert("Lưu thông tin thành công");
             }else{
                 alert(this.responseText);
                 
@@ -325,7 +325,7 @@ window.onscroll = function(){
 }
 
 function adDeleteArticle(id){
-    var conf = confirm('Ban co muon xoa cau hoi nay?');
+    var conf = confirm('Bạn có muốn xóa câu hỏi này?');
     if(conf){
         var xml = new XMLHttpRequest();
         xml.onreadystatechange = function(){
@@ -340,7 +340,7 @@ function adDeleteArticle(id){
     }
 }
 function adDeleteComment(id,f,g = 1){
-    var conf = confirm('Ban co muon xoa binh luan nay?');
+    var conf = confirm('Bạn có muốn xóa bình luận này?');
     if(conf){
         var xml = new XMLHttpRequest();
         xml.onreadystatechange = function(){

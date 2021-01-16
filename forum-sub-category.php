@@ -43,9 +43,9 @@ include("forum/head.php");
                                                 echo '<div class="row h-cate-header" style="text-align: center">Danh muc hien chua bai viet nao</div>';
                                             }else{
                                                 echo '<div class="row h-cate-header">
-                                                <div class="col-7">Tieu de</div>
-                                                <div class="col-2" style="text-align:center">Tong quan</div>
-                                                <div class="col-3">Dang boi</div>
+                                                <div class="col-7">Tiêu đề</div>
+                                                <div class="col-2" style="text-align:center">Tổng quan</div>
+                                                <div class="col-3">Đăng bài</div>
                                             </div>
                                             <div class="h-cate-cate">';
                                                 foreach($article as $v){
@@ -67,9 +67,9 @@ include("forum/head.php");
                                                         echo '</i>'.$v['title'].'</a></div>
                                                         <div class="col-2" style="text-align: center;">
                                                             <div class="h-sc-stats">
-                                                                <p>'.$slComments[0]['sl'].' tra loi</p>
+                                                                <p>'.$slComments[0]['sl'].' trả lời</p>
                                                                 <p>'.$slLikes[0]['sl'].' like</p>
-                                                                <p>'.$v['view_count'].' luot xem</p>
+                                                                <p>'.$v['view_count'].' lượt xem</p>
                                                             </div>
                                                         </div>
                                                         <div class="col-3 h-cate-last-post">
@@ -96,8 +96,8 @@ include("forum/head.php");
                                                 echo '<div class="row h-cate-header" style="text-align: center">Danh muc hien chua bai viet nao</div>';
                                             }else{
                                                 echo '<div class="row h-cate-header">
-                                                <div class="col-7">Tieu de</div>
-                                                <div class="col-2" style="text-align:center">Tong quan</div>
+                                                <div class="col-7">Tiêu đề</div>
+                                                <div class="col-2" style="text-align:center">Tổng quan</div>
                                                 <div class="col-3">Dang boi</div>
                                             </div>
                                             <div class="h-cate-cate">';

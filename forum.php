@@ -59,13 +59,13 @@ include("./forum/head.php");
 
                                         <div class="row">
                                             <div class="col-7">
-                                                Cau hoi gan day
+                                                Câu hỏi gần đây
                                             </div>
                                             <div class="col h-t-t-t">
-                                                Tra loi
+                                                Trả lời
                                             </div>
                                             <div class="col h-t-t-t h-t-t-t-time">
-                                                Thoi gian
+                                                Thời gian
                                             </div>
                                         </div>
                                         
@@ -121,7 +121,7 @@ include("./forum/head.php");
                                                     <div>';
                                                 $sql = "select comment_id, article_id, content,detail, user_id from comments where article_id = ? order by create_at asc";
                                                 $comment = simpleQuery($sql,1,[$v['article_id']]);
-                                                echo count($comment).' binh luan';
+                                                echo count($comment).'bình luận';
                                                 echo '</div>
                                                 </div>
                                                 <div class="col h-t-t-t">
@@ -146,7 +146,7 @@ include("./forum/head.php");
                                                     $isLike = simpleQuery($sql, 1, [$v["article_id"],$_SESSION['user_id']]);
                                                     echo '<a href="#" class="h-a" onclick="return onLikeClick(this,'.$v['article_id'].','.$_SESSION['user_id'].')"><span>';
                                                 }else{
-                                                    echo '<a href="#" class="h-a" onclick="return false" role="button" data-toggle="modal" data-target="#replyModal"><span>';
+                                                    echo '<a href="#" class="h-a" onclick="return false" role="button" data-toggle="modal" data-target=""><span>';
                                                 }
                                                 
                                                 $sql = "select name from users where user_id = ?";
@@ -157,21 +157,21 @@ include("./forum/head.php");
                                                 if(isset($_SESSION['username'])){
                                                     if($isLike[0]['sl'] == 0){
                                                         echo '</span> <i class="far fa-thumbs-up"></i>
-                                                    Thich</a>'; 
+                                                    Thích</a>'; 
                                                     }else{
                                                         echo '</span> <i class="fa-thumbs-up on fas"></i>
-                                                Thich</a>';
+                                                Thích</a>';
                                                     }
                                                 }else{
                                                     echo '</span> <i class="far fa-thumbs-up"></i>
-                                                Thich</a>';
+                                                Thích</a>';
                                                 }
                                                 
                                                 
                                                     if(isset($_SESSION["username"])){
-                                                        echo '<span class="h-a h-reply" onclick= "showCommentBox(this)" data-id="'.$v['article_id'].'"><i class="far fa-comments"></i> Tra Loi</span>';
+                                                        echo '<span class="h-a h-reply" onclick= "showCommentBox(this)" data-id="'.$v['article_id'].'"><i class="far fa-comments"></i> Trả lời</span>';
                                                     }else{
-                                                        echo '<span role="button" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="far fa-comments"></i> Tra Loi</span>';
+                                                        echo '<span role="button" data-toggle="modal" data-target="#replyModal" class="h-a"><i class="far fa-comments"></i> Trả lời</span>';
                                                     }
     
                                                 

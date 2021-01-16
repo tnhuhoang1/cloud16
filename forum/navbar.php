@@ -4,21 +4,21 @@
                             if($_SESSION['path'] == 'home'){
                                 echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a></div>';
                             }else if($_SESSION['path'] == 'article'){
-                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Bai viet</span></div>';
+                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Bài viết</span></div>';
 
                             }else if($_SESSION['path'] == 'category'){
-                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Danh muc</span></div>';
+                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Danh mục</span></div>';
 
                             }else if($_SESSION['path'] == 'info'){
-                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Thong tin</span></div>';
+                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Thông tin</span></div>';
 
                             }else if($_SESSION['path'] == 'member'){
-                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Thanh vien</span></div>';
+                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Thành viên</span></div>';
                             }else if($_SESSION['path'] == 'quest'){
-                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Tao cau hoi</span></div>';
+                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Tạo câu hỏi</span></div>';
 
                             }else if($_SESSION['path'] == 'sub_cate'){
-                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Danh muc con</span></div>';
+                                echo '<div ><a href="forum.php" class="h-a"><i class="fas fa-home"></i></a><i class="fas fa-chevron-right"></i><span> Danh mục con</span></div>';
 
                             }
                         }else{

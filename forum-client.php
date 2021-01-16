@@ -59,7 +59,7 @@ include("forum/head.php");
                                                 </div>
                                             </div>
                                             <div class="col h-t-t-t">
-                                                6 binh luan
+                                                6 bình luận
                                             </div>
                                             <div class="col h-t-t-t">
                                                 16/7/2000
@@ -69,8 +69,8 @@ include("forum/head.php");
                                         
 
                                             <a href="" class="h-a"><i class="far fa-thumbs-up"></i>
-                                            <i class="fas fa-thumbs-up"></i>Thich</a>
-                                            <span role="button" data-toggle="modal" data-target="#replyModal" class="h-a h-reply"><i class="far fa-comments"></i> Tra Loi</span>
+                                            <i class="fas fa-thumbs-up"></i>Thích</a>
+                                            <span role="button" data-toggle="modal" data-target="#replyModal" class="h-a h-reply"><i class="far fa-comments"></i> Trả lời</span>
                                             <!-- Modal -->
                                             <div class="modal fade" id="replyModal" data-backdrop="true" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -108,13 +108,13 @@ include("forum/head.php");
                                                                                         
                                                                                         <td></td>
                                                                                         <td><input type="checkbox" id="checkbox">
-                                                                                            <label for="checkbox">Ghi nho dang nhap</label>
+                                                                                            <label for="checkbox">Ghi nhớ đăng nhập</label>
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         
                                                                                         <td></td>
-                                                                                        <td><button class="btn btn-primary" type="submit">Login</button></td>
+                                                                                        <td><button class="btn btn-primary" type="submit">Đăng nhập</button></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>                                                   
@@ -229,7 +229,7 @@ include("forum/head.php");
                                                 <img src="images/i2.jpg" alt="" class="img-fluid h-user-img-title"> <a href="#" class="badge badge-primary h-badge">Thong bao</a>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente id soluta, rerum modi asperiores voluptatibus ducimus unde nulla hic nam nesciunt explicabo voluptates perspiciatis, ea perferendis odit laudantium. Laudantium, vero. 
                                             </div>
                                             <div class="col h-t-t-t">
-                                                6 binh luan
+                                                6 bình luận
                                             </div>
                                             <div class="col h-t-t-t">
                                                 16/7/2000
@@ -238,8 +238,8 @@ include("forum/head.php");
                                         <div class="row h-t-c-c">
                                     
                                             <a href="" class="h-a"><i class="far fa-thumbs-up"></i>
-                                            <i class="fas fa-thumbs-up"></i>Thich</a>
-                                            <span role="button" data-toggle="modal" data-target="#replyModal" class="h-a h-reply"><i class="far fa-comments"></i> Tra Loi</span>
+                                            <i class="fas fa-thumbs-up"></i>Thích</a>
+                                            <span role="button" data-toggle="modal" data-target="#replyModal" class="h-a h-reply"><i class="far fa-comments"></i> Trả lời</span>
                                             <!-- Modal -->
                                             <div class="modal fade" id="replyModal" data-backdrop="true" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -277,7 +277,7 @@ include("forum/head.php");
                                                                                         
                                                                                         <td></td>
                                                                                         <td><input type="checkbox" id="checkbox">
-                                                                                            <label for="checkbox">Ghi nho dang nhap</label>
+                                                                                            <label for="checkbox">Ghi nhớ đăng nhập</label>
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
@@ -530,8 +530,8 @@ include("forum/head.php");
                                     include("forum/most-asked.php");
                                     ?>
                                     <div class="h-member">
-                                        <div><a>So thanh vien: </a><span>111</span></div>
-                                        <div><a>Tong so bai: </a><span>16</span></div>
+                                        <div><a>số thành viên: </a><span>111</span></div>
+                                        <div><a>Tổng số bài: </a><span>16</span></div>
 
                                     </div>
                                 </div>
